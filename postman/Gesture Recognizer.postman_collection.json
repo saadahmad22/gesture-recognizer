@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "35be2642-d8d3-49d1-9819-bfa4efbd32f8",
+		"name": "Gesture Recognizer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28789532"
+	},
+	"item": [
+		{
+			"name": "Predict Image Simple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "gesture",
+							"type": "file",
+							"src": "postman-cloud:///1ef59cd4-2260-4390-812c-31ab9c1ab65a"
+						},
+						{
+							"key": "model_configs",
+							"value": "eyJydW5uaW5nX21vZGUiOiJJTUFHRSIsIm51bV9oYW5kcyI6MiwibWluX2hhbmRfZGV0ZWN0aW9uX2NvbmZpZGVuY2UiOjAuNSwibWluX2hhbmRfcHJlc2VuY2VfY29uZmlkZW5jZSI6MC41LCJtaW5fdHJhY2tpbmdfY29uZmlkZW5jZSI6MC41Cn0=",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/predict",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"predict"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Video",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "gesture",
+							"type": "file",
+							"src": "/Users/saad/Downloads/hand_video copy.mp4"
+						},
+						{
+							"key": "model_configs",
+							"value": "eyJydW5uaW5nX21vZGUiOiJWSURFTyIsIm51bV9oYW5kcyI6MiwibWluX2hhbmRfZGV0ZWN0aW9uX2NvbmZpZGVuY2UiOjAuNSwibWluX2hhbmRfcHJlc2VuY2VfY29uZmlkZW5jZSI6MC41LCJtaW5fdHJhY2tpbmdfY29uZmlkZW5jZSI6MC41fQ==",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/predict",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"predict"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
