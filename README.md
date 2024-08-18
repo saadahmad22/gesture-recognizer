@@ -1,5 +1,5 @@
 # Gesture Recognizer
-Project integrating a pre-trained gesture recognition model into a sample Flask backend API structure
+Python (Flask) based API for pre-trained gesture recognition model with generic configuration options.
 
 ## Introduction
 
