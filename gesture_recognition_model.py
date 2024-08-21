@@ -175,7 +175,7 @@ class GestureRecognitionModel:
 
         match self.running_mode:
             case VisionRunningMode.VIDEO:
-                return self.gesture_recognizer.recognize(input_data, validate_image_processing_options(image_processing_options))
+                return self.gesture_recognizer.recognize_for_video(input_data, frame_timestamp_ms, validate_image_processing_options(image_processing_options))
             case VisionRunningMode.LIVE_STREAM:
                 self.gesture_recognizer.recognize(input_data, validate_image_processing_options(image_processing_options))
                 return None

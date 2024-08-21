@@ -100,7 +100,7 @@ def predict():
                     prediction.append(
                         model.predict(
                             image,
-                            frame_timestamp_ms=1000 * i // frame_rate,
+                            frame_timestamp_ms=int(1000 * i // frame_rate),
                             image_processing_options=image_options
                             )                            
                         )
