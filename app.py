@@ -94,12 +94,12 @@ def predict():
                     ret, frame = video.read()
                     if not ret:
                         break
-                    file_path = f"{tmpdirname}/frame_{i}.png"
-                    cv2.imwrite(file_path, frame)
+
+                    image = mp.Image(mp.ImageFormat.SRGB, cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
 
                     prediction.append(
                         model.predict(
-                            mp.Image.create_from_file(file_path),
+                            image,
                             frame_timestamp_ms=1000 * i // frame_rate,
                             image_processing_options=image_options
                             )                            
